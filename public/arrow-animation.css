@@ -1,0 +1,50 @@
+/* HTML */
+/* <div class="arrow-container">
+    <img id="arrow-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAADR0dEuLi6qqqqRkZH8/Pz39/ft7e3j4+PExMTf39/y8vLp6en5+fkPDw+BgYFgYGA9PT1LS0s2NjbY2NjLy8u4uLgjIyN9fX2KioqwsLBYWFgWFhabm5seHh5tbW11dXUpKSlEREQ6OjqgoKBoaGhcXFyXl5cFpd08AAAEvElEQVR4nO2di1ZqIRRF6eE5auYjtcwss/f/f+G17u0KdR7A2bDAseYH1J6jEYsNHFBKkN6JIOeSlUlBQxrSEA8NaUhDPDSkIQ3x0JCGNMRDQxrSEA8NaUhDPDSkIQ3x0JCGNMRDQxrSEA8NaUhDPDSkIQ3x0JCGNMRDQxrSEA8NaUhDPDSkIQ3x0JCGNMRDQxrSEA8NaUhDPDSkIQ3x0JCGNMRDQxrSEA8NaUhDPDSkIQ3xpGl4KsitpGFvKVOUWk/OxLiXNNyKlDRZq2IqWVZyTAul+jN0FQGZ9T//E0foMgIy+jvYDBboQgKxGHyPp8MtupYgbIeHyLhDFxOEOz0VP9DVBODDyP3x8WXGdGxObUYbdEXCbMpf07crdE2iXFVMUJfHpHi1rJqDD0WnlVDuh1WCe0V0YWLUCBbqAV2ZEA97lxrH48iMaZ3fp6JoDwvitkFQqXKOrq8z899BaLDMvc9YVObEESm2Cyp1jS6yE9ftgkqdo6vsgOUS5Cu6Tm9e7QRVmWssTluG0QPjPCfhV+N2tW9GOcbifGQvmGVm2OSEzim6YGdO3QSVupmgS3ZicuMqqIq8WqmHxul2jWJOfUZzP1FLPls2My8/pfq5rDBu+p6GanmGrt2KswtfQaUu0MXbMOkgmEVm3LvnhEH6fYZtP1FL6rH40FVQqUe0QyOP3QXVZcqZsbkUMExZUUZwnxmpDqjdckIn1S2bmg0YH5KMRY+GqYEUY7FzEJq8oX1+8SgrqMrUYnFnvXJoS2KZIZUThiJayiCAoFKnK7TWf1aOK4e23KRyWKNrw1RPKn2GcE7opLFlMw0nqMod2u4kRE7o9PFbNnPvhTU7yiew4FPQv+An19gVxoXzBow7N0hB2X4iRcUogkqtYYLrOIK4zAibE4YippV6jCa4j0XENv9L4CA0AfQZqwg5YSjGTv6nyILxM0Nw5dAW0Y9+W+nFFyyKmIq9wu8oQjdG8TJj53SgS44y1oC6cjiSJ0v/OYrgc9QgNImSGfFzQifGrhQgJ3TCHwpH348xDp0ZPURMmIphd6XeYMOoRsjltzla7otBOMX5oP3XxyBYKxW7Yaon1KHwZARDZQY6JwxCZMZH+6+NifwKY6yVQ1uKd2HBd3jS/2Qg22ekkhM6F5KKz2In1iSRzIxAJxG6InePT6QNGFcKsVi8q70TAY1QK9VLoZ+ooZA4GrZJ9Q/4Rdn9W6lZxB0mHzrH4nOCQWjS9UOiJIPQ5LrL6bd7qzsRwBTn/ofCJ+dJjzLfFP59xjoLwX1a7zwFd8km/U9GfiuMb6AdJh8GLx6CL8nnhE7f/b7QLXCHyYeh6wrjCrwB445rn5HUwpodbooZCirlcidDyKPb4XDIjJxyQsf6pvBZZsPogUu7AfUpyCc+cbC6+22SQz9Ri8Wtr9vsgtCkfYXxrv2HpE1bZuSZEzotN4X/vHU7RxozI9+c0Gl6XSLTpP/JoO5DokVWHWETNa9L5J4TOtWZkX1O6FS9LpHYSYSOVGTGMeSEzq/XJd4T34DxwFx+q3qdIXeM1yWqX2fIHa3PqHudIXcOh8KPVPBwJ4PAHWuJ8u91iabXGbLns1vMvyNsopy3vs6QO8tN7Jz4A5OpeEwl4paoAAAAAElFTkSuQmCC"/>
+    
+</div> */
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    background-color:rgba(0,0,0,0.94);
+}
+
+.arrow-container {
+    display:flex-grid;
+    align-items:center;
+    margin-top:20px;
+    margin-left:610px;
+    height:100px;
+    width:200px;
+    border:1px solid white;
+}
+
+
+
+
+#arrow-img {
+    margin-left:70px;
+    height:50px;
+    width:50px;
+    animation: move-arrow-down infinite 0.8s;
+}
+
+
+@keyframes move-arrow-down {
+    0% {
+        margin-bottom:7px;
+        
+    }
+    
+    50% {
+        margin-top:10px;
+    }
+    
+    100% {
+        margin-top:5px;
+        
+    }
+}
