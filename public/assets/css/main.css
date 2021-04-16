@@ -333,7 +333,15 @@ input, select, textarea {
 	}
 
 	#additional-skills-button {
+		align-items: center;
 		margin-bottom: 250px;
+	}
+
+	@media screen and (max-width:900px) and (min-width:600px) {
+		.skills-container .programming-icons{
+			box-sizing:border-box;
+
+		}
 	}
 
 
@@ -356,6 +364,7 @@ input, select, textarea {
 	}
 	.skills-container {
 		display: flex;
+		box-sizing: border-box;
 		justify-content: space-between;
 	}
 
@@ -474,17 +483,58 @@ input, select, textarea {
 	background-color: blueviolet;
 	 }
 
-	.additionals-skills-container {
+	/* .additionals-skills-container  ~.arrow-container{
+		visibility: hidden;
 		display:flex;
 		justify-content: space-between;
 
 	}
 
-	.additionals-skills-container:hover {
+	.additionals-skills-container:hover ~ #arrow-img {
+		visibility: visible;
 		animation: move-down linear 1s;
 		justify-content: space-between;
+		animation: move-arrow-down infinite 0.8s;
 
+	} */
+
+
+	
+	.arrow-container {
+    display:grid;
+    align-items:center;
+    margin-top:20px;
+    margin-left:610px;
+    height:100px;
+    width:200px;
+    border:1px solid white;
+}
+
+	#arrow-img {
+		visibility: visible;
+		margin-left:70px;
+		height:50px;
+		width:50px;
+		animation: move-arrow-down infinite 0.8s;
 	}
+	
+	
+	@keyframes move-arrow-down {
+		0% {
+			margin-bottom:7px;
+			
+		}
+		
+		50% {
+			margin-top:10px;
+		}
+		
+		100% {
+			margin-top:5px;
+			
+		}
+	}
+	
 
 	@keyframes move-down {
 		0% {
@@ -1505,7 +1555,7 @@ input, select, textarea {
 			.row {
 				display: flex;
 				flex-wrap: wrap;
-				box-sizing: border-box;
+				/* box-sizing: border-box; */
 				align-items: stretch;
 			}
 
