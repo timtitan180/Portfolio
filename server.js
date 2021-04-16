@@ -76,19 +76,13 @@ app.post('/contactpage',(req,res)=>{
        console.log(message);
        newPortfolioViewer = new PortfolioViewer({email:email,companyName:companyName,message:message},()=>{
              newPortfolioViewer.save().then(()=>{console.log(newPortfolioViewer)});
-             res.redirect("/");
+             res.redirect("/contactpage");
        });
      }
      else {
        res.redirect('/contactpage');
        console.log("Could not get form");
      }
-     var mailOptions = {
-      from:email,
-      to:"timtudosa18@yahoo.com",
-      subject:"Portfolio Submitted Form",
-      text:message
-    }
   
      
      res.sendFile("C:/Users/timtu/Desktop/MyPortfolio/public/elements.html");
