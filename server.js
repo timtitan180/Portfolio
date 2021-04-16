@@ -2,6 +2,10 @@ const express = require('express');
 
 const mongoose = require("mongoose");
 
+const nodemailer = require('nodemailer');
+
+require('dotenv').config();
+
 const fs = require('fs');
 
 const path = require('path');
@@ -26,9 +30,32 @@ const PortfolioViewerSchema = new mongoose.Schema({
   email:{type:String},companyName:{type:String},message:{type:String}
 });
 
-const PortfolioViewer = mongoose.model('portfolioviewer',PortfolioViewerSchema); 
+const PortfolioViewer = mongoose.model('portfolioviewer',PortfolioViewerSchema);
+
 
 router.get('/',(req,res)=>{
+  var transporter = nodemailer.createTransport({
+    service: 'yahoo',
+    auth: {
+      user: 'timtudosa6@gmail.com',
+      pass: process.env.password
+    }
+  });
+
+  var mailOptions = {
+    from:"ovidiutudosa72@yahoo.com",
+    to:"timtudosa18@yahoo.com",
+    subject:"Portfolio Submitted Form",
+    text:"Hello there"
+  }
+  
+  transporter.sendMail(mailOptions,(err)=>{
+    if(err) {
+      console.log("There was an error submitting the form.");
+    }
+  });
+  
+
   res.sendFile(fs.readFileSync("index.html"));
 });
 
@@ -56,6 +83,14 @@ app.post('/contactpage',(req,res)=>{
        res.redirect('/contactpage');
        console.log("Could not get form");
      }
+     var mailOptions = {
+      from:email,
+      to:"timtudosa18@yahoo.com",
+      subject:"Portfolio Submitted Form",
+      text:message
+    }
+  
+     
      res.sendFile("C:/Users/timtu/Desktop/MyPortfolio/public/elements.html");
  });
 
