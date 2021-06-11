@@ -552,6 +552,8 @@ input, select, textarea {
 	}
 
 
+
+
 	 /* .bio-box {
 		height:300px;
 		width:200px;
@@ -560,7 +562,7 @@ input, select, textarea {
 		background-color: rgba(232, 236, 241, 0.17);
 		box-shadow: 0 1px 2px; */
 
-	.additionals-skills-text { width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px; } 
+	.additionals-skills-text {margin:auto;height:200px;width:200px;border-top:1px solid gray;text-align:center;  line-height:0.1em; } 
 	.additionals-skills-text span { background:rgb(29, 18, 18); padding:0 10px; }
 	
 	#bio {
@@ -568,9 +570,7 @@ input, select, textarea {
 		justify-content: space-between;
 	}
 
-	.additionals-skills-text {
-		border-top: 1px solid gray;
-	}
+
 
 /* Row */
 
@@ -3882,6 +3882,10 @@ input, select, textarea {
 					border-width: 3px !important;
 				}
 
+		}
+
+		.form-inputs {
+			border-radius:2px solid;
 		}
 
 /* Nav */
