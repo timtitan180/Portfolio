@@ -4,13 +4,16 @@ const mongoose = require("mongoose");
 
 const nodemailer = require('nodemailer');
 
+
 require('dotenv').config();
+
+
+const portfolioViewer = require('./model/portfolioViewer.js');
 
 const fs = require('fs');
 
 const path = require('path');
 
-const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -26,14 +29,23 @@ mongoose.connect("mongodb://localhost:27017/portfolioViewerdb",{useNewUrlParser:
 
 const port = 4541;
 
-const PortfolioViewerSchema = new mongoose.Schema({
-  email:{type:String},companyName:{type:String},message:{type:String}
-});
-
-const PortfolioViewer = mongoose.model('portfolioviewer',PortfolioViewerSchema);
-
 
 router.get('/',(req,res)=>{
+  
+  res.sendFile(fs.readFile("index.html"));
+});
+
+router.get('/contactpage',(req,res)=>{
+  res.sendFile(fs.readFile("index.html"));
+});
+
+app.post('/contact_page',(req,res)=>{
+
+  var email = req.body.email;
+   var companyName = req.body.companyName;
+   var message = req.body.message;
+
+
   var transporter = nodemailer.createTransport({
     service: 'yahoo',
     auth: {
@@ -43,10 +55,9 @@ router.get('/',(req,res)=>{
   });
 
   var mailOptions = {
-    from:"ovidiutudosa72@yahoo.com",
-    to:"timtudosa18@yahoo.com",
-    subject:"Portfolio Submitted Form",
-    text:"Hello there"
+    from:email,
+    to:"timtudosa6@gmail.com",
+    text:message
   }
   
   transporter.sendMail(mailOptions,(err)=>{
@@ -54,42 +65,32 @@ router.get('/',(req,res)=>{
       console.log("There was an error submitting the form.");
     }
   });
-  
-
-  res.sendFile(fs.readFileSync("index.html"));
-});
-
-router.get('/contactpage',(req,res)=>{
-
-  res.sendFile(fs.readFileSync("elements.html"));
-});
-
-app.post('/contactpage',(req,res)=>{
-   var email = req.body.email;
-   var companyName = req.body.companyName;
-   var message = req.body.message;
 
    if(email.length > 0 || companyName.length > 0 || message.length > 0) {
       inputsNotEntered = false;
        console.log(email);
        console.log(companyName);
        console.log(message);
-       newPortfolioViewer = new PortfolioViewer({email:email,companyName:companyName,message:message},()=>{
-             newPortfolioViewer.save().then(()=>{console.log(newPortfolioViewer)});
-             res.redirect("/contactpage");
-       });
+      //  portfolioViewer({email:email,companyName:companyName,message:message},()=>{
+      //        portfolioViewer.save().then(()=>{console.log(portfolioViewer)}).catch((err)=>{
+      //          console.log("Could not retrieve added data");
+      //          console.log(err);
+      //        });
+      //        console.log(portfolioViewer);
+      //        res.redirect("/contactpage");
+      //  });
      }
      else {
-       res.redirect('/contactpage');
+       res.redirect('/');
        console.log("Could not get form");
      }
   
      
-     res.sendFile("C:/Users/timtu/Desktop/MyPortfolio/public/elements.html");
+     res.sendFile(fs.readFile("index.html"));
  });
 
 router.get('/elements',(req,res)=>{
-  res.sendFile(fs.readFileSync("elements.html"));
+  res.sendFile(fs.readFile("index.html"));
 });
 
 

@@ -18,13 +18,13 @@
 	}
 
 		#wrapper.fade-in:before {
-			display: none;
+			display: block;
 		}
 
 /* Intro */
 
 	body.is-preload #intro {
-		opacity: 1;
+		opacity: 10;
 	}
 
 		body.is-preload #intro:not(.hidden) + #header + #nav {
