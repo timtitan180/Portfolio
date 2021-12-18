@@ -1,10 +1,44 @@
 @import url(font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+							body{
+							  padding: 40px;
+							  background-color: #121212;  
+							}
+							
+							.introduction {
+							  border-right: solid 3px rgba(0, 17, 255, 0.75);
+							  white-space: nowrap;
+							  overflow: hidden;    
+							  font-family: 'Source Code Pro', monospace;  
+							  font-size: 28px;
+							  color: rgba(14, 13, 13, 0.7);
+							}
+							
+							/* Animation */
+							.introduction {
+							  animation: animated-text 2s steps(29,end) 2s 1 normal both,
+										 animated-cursor 600ms steps(29,end) infinite;
+							}
+							
+							/* text animation */
+							
+							@keyframes animated-text{
+							  from{width: 0;}
+							  to{width: 472px;}
+							}
+							
+							/* cursor animations */
+							
+							@keyframes animated-cursor{
+							  from{border-right-color: rgba(247, 232, 35, 0.75);}
+							  to{border-right-color: transparent;}
+							}
 
 /* Wrapper */
 

@@ -67,6 +67,37 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+.introduction {
+	border-right: solid 3px rgba(0, 195, 255, 0.75);
+	white-space: nowrap;
+	overflow: hidden;    
+	font-family: 'Source Code Pro', monospace;  
+	font-size: 60px;
+	font-style: normal;
+	color: #f8f2f2;
+  }
+  
+  /* Animation */
+  .introduction {
+	animation: animated-text 2s steps(29,end) 2s 1 normal both,
+			   animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+	from{width: 0;visibility: hidden;}
+	to{width: 480px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+	from{border-right-color: #f5f4ed;}
+	to{border-right-color: transparent;}
+  }
+  
  #introHeader {
 opacity: 0;
 -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
@@ -512,32 +543,32 @@ opacity: 0;
 		width: 90px;
 		color:green;
 	}
-	.html-container:hover .show-HTML {
+	.html-container .show-HTML:hover {
 		margin-bottom:20px;
 		visibility: visible;
 		padding-right: 30px;
 	}
-	.css-container:hover .show-CSS {
+	.css-container .show-CSS:hover {
 		margin-bottom:20px;
 		visibility: visible;
 		padding-right: 30px;
 	}
-	.js-container:hover .show-JS {
+	.js-container .show-JS:hover {
 		margin-bottom:20px;
 		visibility: visible;
 		padding-right: 30px;
 	}
-	.nodejs-container:hover .show-NodeJS {
+	.nodejs-container .show-NodeJS:hover {
 		margin-bottom:20px;
 		visibility: visible;
 		padding-right: 30px;
 	}
-	.react-container:hover .show-React {
+	.react-container .show-React:hover {
 		margin-bottom:20px; 
 		visibility: visible;
 		padding-right: 30px;
 	}
-	.python-container:hover .show-Python {
+	.python-container .show-Python:hover {
 		margin-bottom:20px;
 		visibility: visible;
 		padding-right: 30px;
@@ -2937,10 +2968,9 @@ opacity: 0;
 	}
 
 	.image.fit:hover {
-		border: solid 1px rgb(22, 10, 160);
-		-moz-box-shadow: 1px 1px 5px rgb(47, 24, 181);
+		/* -moz-box-shadow: 1px 1px 5px rgb(47, 24, 181);
 		-webkit-box-shadow: 1px 1px 5px rgb(18, 53, 231);
-		box-shadow: 1px 1px 5px rgb(7, 15, 176);
+		box-shadow: 1px 1px 5px rgb(7, 15, 176); */
 	}
 
 		.image img {
