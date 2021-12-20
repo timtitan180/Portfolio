@@ -629,6 +629,18 @@ opacity: 0;
 		text-align: center;
 	}
 
+	.contact-me {
+		margin-left:600px;
+		justify-content: center;
+		text-align: center;
+
+	}
+
+	form {
+		height:200px;
+		width:200px;
+	}
+
 	 #main {
 		box-shadow: 1px 2px 4px blue;
 	 }
