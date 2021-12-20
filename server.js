@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 mongoose.connect("mongodb://localhost:27017/portfolioViewerdb",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{console.log("MONGOODB IS connected and ready to save data...")}).catch((err)=>{console.log(err)});
 
-const port = 4541;
+const port = process.env.PORT || 4541;
 
 
 app.get('/',(req,res)=>{
