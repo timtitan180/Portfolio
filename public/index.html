@@ -8,6 +8,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 		<div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+		<div>Icons made by <a href="https://www.flaticon.com/authors/riajulislam" title="riajulislam">riajulislam</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>	
 	</head>
 	<body class="is-preload">
 
@@ -29,11 +30,11 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">This is Me</a></li>
-							<li><a href="elements.html">Contact Me</a></li>
+							<button class="active" onclick="document.querySelector('.contact-me').scrollIntoView()" style="border:0;color:white;height:100%">Contact Me</button>
 						</ul>
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-linkedin-f"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/timtitan180" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/tim-tudosa-a3539315a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						</ul>
 					</nav>  
 
@@ -52,36 +53,64 @@
 								</header>
 								<br>
 								<h2>MY PROGRAMMING SKILLS</h2>
-								<div class="skills-container">
-									<div class="html-container">																																			
+								<!-- <div class="skills-container"> -->
+									<div class="language-container">																																			
 									<i style="color:orange;"class="fab fa-html5 programming-icons"></i>
-									<div class="show-HTML" style="visibility: visible;">HTML</div>
-									</div>
-									<div class="css-container">
 									<i style="color:blue;" class="fab fa-css3 programming-icons"></i>
-									<div class="show-CSS" style="visibility: visible;margin-top:10px;">CSS</div>
-									</div>
-									<div class="js-container">
 									<i style="color:yellow;"class="fab fa-js programming-icons"></i>
-									<div class="show-JS" style="visibility: visible;margin-top:10px">Javascript</div>
-									</div>
-									<div class="nodejs-container">									
-										<i style="color:green;" class="fab fa-node-js programming-icons"></i>
-										<div class="show-NodeJS" style="visibility: visible;margin-top:10px">NodeJS</div>
-									</div>
-									<div class="react-container">
+									<i style="color:green;" class="fab fa-node-js programming-icons"></i>
 									<i style="color:aqua;" class="fab fa-react programming-icons"></i>
-									<div class="show-React" style="visibility: visible;margin-top:10px">React</div>
-									</div>
-									<div class="python-container">
 									<i style="color:aliceblue;" class="fab fa-python programming-icons"></i>
-										<div class="show-Python" style="visibility: visible;margin-top:10px;color:green">Python</div>
+									<i style="color:orange;" class="fab fa-java programming-icons"></i>
 									</div>
-									<div class="java-container">
-										<i style="color:orange;" class="fab fa-java programming-icons"></i>
-											<div class="show-Python" style="visibility: visible;margin-top:10px;color:orange">Java</div>
+							
+									<div class="language-text-container">
+									<div class="show-HTML" style="visibility: visible;">HTML</div>
+									<div class="show-CSS" style="visibility: visible;margin-top:10px;">CSS</div>
+									<div class="show-JS" style="visibility: visible;margin-top:10px">Javascript</div>
+									<div class="show-NodeJS" style="visibility: visible;margin-top:10px">NodeJS</div>
+									<div class="show-React" style="visibility: visible;margin-top:10px">React</div>
+									<div class="show-Python" style="visibility: visible;margin-top:10px;color:green">Python</div>
+									<div class="show-Python" style="visibility: visible;margin-left:5px;margin-top:10px;color:orange">Java</div>
+									</div>
+<!-- 									
+									<div class="language-container">
+									<i style="color:blue;" class="fab fa-css3 programming-icons"></i>
+									</div>
+									<div class="language-text-container">
+										<div class="show-CSS" style="visibility: visible;margin-top:10px;">CSS</div>
+										</div>
+									<div class="language-container">
+									<i style="color:yellow;"class="fab fa-js programming-icons"></i>
+									</div>
+										<div class="language-text-container">
+										<div class="show show-JS" style="visibility: visible;margin-top:10px">Javascript</div>
+										</div>
+									<div class="language-container">									
+										<i style="color:green;" class="fab fa-node-js programming-icons"></i>
+										</div>
+										<div class="language-text-container">
+										<div class="show show-NodeJS" style="visibility: visible;margin-top:10px">NodeJS</div>
+										</div>
+									<div class="language-container">
+									<i style="color:aqua;" class="fab fa-react programming-icons"></i>
+									<div class="language-text-container">
+									<div class="show show-React" style="visibility: visible;margin-top:10px">React</div>
+									</div>
+									</div>
+									<div class="language-container">
+									<i style="color:aliceblue;" class="fab fa-python programming-icons"></i>
+										<div class="language-text-container">
+										<div class="show show-Python" style="visibility: visible;margin-top:10px;color:green">Python</div>
 										</div>
 									</div>
+									<div class="language-container">
+										<i style="color:orange;" class="fab fa-java programming-icons"></i>
+										</div>
+											<div class="language-text-container">
+											<div class="show show-Python" style="visibility: visible;margin-top:10px;color:orange">Java</div>
+										</div>
+									</div> -->
 								<div class="bubble">
 								</div>
 								</br>
@@ -128,8 +157,7 @@
 									<header>
 										<h2><a href="#">Mountaineer<br /></h2>
 									</header>
-									<a href="https://pure-escarpment-17738.herokuapp.com/" class="image fit"><img src="images/mountaineerSignUp.png" alt="" /></a>
-									
+									<a href="https://pure-escarpment-17738.herokuapp.com/" class="image fit"><img class="project-img" src="images/mountaineerSignUp.png" alt=""></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my GitHub.</p>
 									<ul class="actions special">
 										<li><a href="https://pure-escarpment-17738.herokuapp.com/" class="button">Live Demo</a></li>
@@ -140,7 +168,7 @@
 									<header>
 										<h2><a href="#">Currency Converter<br /></h2>
 									</header>
-									<a href="http://currency-conversion-app.herokuapp.com/" class="image fit"><img src="images/main.png" alt=""/></a>
+									<a href="http://currency-conversion-app.herokuapp.com/" class="image fit"><img class="project-img" src="images/main.png" alt=""/></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my GitHub.</p>
 									<ul class="actions special">
 										<li><a href="http://currency-conversion-app.herokuapp.com/" class="button">Live Demo</a></li>
@@ -152,7 +180,7 @@
 										<h2><a href="#"><br />
 										Boredom Solver</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/boredomsolver.png" alt="" /></a>
+									<a href="#" class="image fit"><img class="project-img" src="images/boredomsolver.png" alt="" /></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my Github.</p>
 									<ul class="actions special">
 										<li><a href="https://boredomsolver.herokuapp.com/" class="button">Live Demo</a></li>
@@ -163,7 +191,7 @@
 									<header>
 										<h2><a href="#">Weather App</a><br /></a></h2>
 									</header>
-									<a href="https://desolate-cliffs-91901.herokuapp.com/" class="image fit"><img src="images/chicagoweatherapp.png" alt="" /></a>
+									<a href="https://desolate-cliffs-91901.herokuapp.com/" class="image fit"><img class="project-img" src="images/chicagoweatherapp.png" alt="" /></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my Github</p>
 									<ul class="actions special">
 										<li><a href="https://desolate-cliffs-91901.herokuapp.com/" class="button">Live Demo</a></li>
@@ -176,7 +204,7 @@
 									<header>
 										<h2><a href="#">PDF Analyzer</a><br /></a></h2>
 									</header>
-									<a href="https://pdf-analyzer-app.herokuapp.com/" class="image fit"><img src="images/pdf-analyzer-app.PNG" alt="" /></a>
+									<a href="https://pdf-analyzer-app.herokuapp.com/" class="image fit"><img class="project-img" src="images/pdf-analyzer-app.PNG" alt="" /></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my Github</p>
 									<ul class="actions special">
 										<li><a href="https://pdf-analyzer-app.herokuapp.com/" class="button">Live Demo</a></li>
@@ -189,7 +217,7 @@
 									<header class="major">
 										<h2><a href="#">Grand Slam</a><br /></a></h2>
 									</header>
-									<a href="https://localhost:8080/" class="image fit"><img src="images/grandslam.png" alt="java image" /></a>
+									<a href="https://localhost:8080/" class="image fit"><img class="project-img" src="images/grandslam.png" alt="java image" /></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my Github</p>
 									<ul class="actions special">
 										<li><a href="https://localhost:8080/" class="button">Live Demo</a></li>
