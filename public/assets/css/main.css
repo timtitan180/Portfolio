@@ -629,17 +629,41 @@ opacity: 0;
 		text-align: center;
 	}
 
-	.contact-me {
-		margin-left:600px;
+	.contact-me form {
+		border-radius: 7px;
+		box-shadow: 0 0 2px 1px #717981;
+		margin-right:80px;
+		margin-top:10px;
+		margin-left:520px;
+		height:500px;
+		width:500px;
 		justify-content: center;
 		text-align: center;
 
 	}
 
-	form {
+	.contact-me-inputs{
+		margin-left:70px;
+		width: 50%;
+	}
+
+	.contact-me-inputs:first-child {
+		width:70%;
+		margin-top: 10px;
+		margin-bottom:10px;
+	}
+
+	.contact-me-message {
+		height:200px;
+	}
+
+	.contact-me button {
+		margin-top:60px;
+	}
+	/* form {
 		height:200px;
 		width:200px;
-	}
+	} */
 
 	 #main {
 		box-shadow: 1px 2px 4px blue;
