@@ -18,7 +18,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	scroll-behavior: smooth;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2656,8 +2658,9 @@ opacity: 0;
 	button,
 	.button {
 		background-color: transparent;
+		border:0;
 		box-shadow: inset 0 0 0 2px #212931;
-		color: #212931 !important;
+		color: #0000 !important;
 	}
 
 		input[type="submit"]:hover,

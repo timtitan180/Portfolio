@@ -2,9 +2,7 @@ const express = require('express');
 
 const mongoose = require("mongoose");
 
-const request = require("request");
-
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 
 
 require('dotenv').config();
@@ -30,15 +28,15 @@ mongoose.connect("mongodb://localhost:27017/portfolioViewerdb",{useNewUrlParser:
 const port = process.env.PORT || 4541;
 
 
-app.get('/',(req,res)=>{
+app.get('/home',(req,res)=>{
   console.log("Website is live!");
 
-  res.send("index.html");
+  res.sendFile("index.html");
 
 });
 
-app.get('/contactpage',(req,res)=>{
-  res.sendFile(fs.readFile("index.html"));
+app.get('/formsubmit.com/timtudosa6@gmail.com',(req,res)=>{
+  res.redirect("/");
 });
 
 app.post('/',(req,res)=>{
