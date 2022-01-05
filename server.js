@@ -1,6 +1,8 @@
 const express = require('express');
 
 const mongoose = require("mongoose");
+const request = require("request");
+const requestPromise = require("request-promise");
 
 // const nodemailer = require('nodemailer');
 
@@ -28,10 +30,10 @@ mongoose.connect("mongodb://localhost:27017/portfolioViewerdb",{useNewUrlParser:
 const port = process.env.PORT || 4541;
 
 
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
   console.log("Website is live!");
-
-  res.sendFile("index.html");
+  
+  res.send("index.html");
 
 });
 
@@ -39,9 +41,35 @@ app.get('/formsubmit.com/timtudosa6@gmail.com',(req,res)=>{
   res.redirect("/");
 });
 
-app.post('/',(req,res)=>{
-  console.log(req.body.email);
-  console.log(req.body.message);
+app.post("/contact", (req,res)=>{
+  var data = {
+    'email':req.body.email,
+    'subject':req.body.subject,
+    'message':req.body.message
+  } 
+  var options = {
+    method:'POST',
+    uri:'http://localhost:6532/',
+    body:data,
+    json:true
+  }
+
+  fetch("http://localhost:6532/").then(response=>{response.)}).then(data=>{response.send(JSON.stringify(data))});
+  //send data object to flask server in string format and from the flask server parse the string to get the json
+  //format then pull out the email subject and message
+
+  // request('http://localhost:6532/')
+  //   .on('error', (err) => {
+  //     console.log(err);
+  //   })
+  //   .on('end', () => {
+  //     res.send(json);
+  //   })
+  //   .pipe(request.post('http://localhost:6532/'));
+    res.redirect('/');
+  // fetch("http://127.0.0.1:6532/").then(response=>{response.json()}).then(data=>{
+  //   console.log(data);
+  // });
 });
 
 

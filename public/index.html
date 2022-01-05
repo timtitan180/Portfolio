@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+		<div id="top"></div>
 		<div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 		<div>Icons made by <a href="https://www.flaticon.com/authors/riajulislam" title="riajulislam">riajulislam</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>	
 	</head>
@@ -29,8 +30,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">This is Me</a></li>
-							<li class="active" onclick="document.querySelector('.contact-me').scrollIntoView()" style="color:black;hover:aqua">Contact Me</li>
+							<li class="active" id="contact-me-link" onclick="document.querySelector('.contact-me').scrollIntoView()" style="padding-right:10px;font-size:15px;color:black;font-family: Orbitron sans-serif;">Contact Me</li>
 							<li class="active"></li>	
 							</ul>
 						<ul class="icons">
@@ -55,25 +55,46 @@
 								<br>
 								<h2>MY PROGRAMMING SKILLS</h2>
 								<!-- <div class="skills-container"> -->
+									<div class="skills-container">
 									<div class="language-container">																																			
-									<i style="color:orange;"class="fab fa-html5 programming-icons"></i>
+									<i style="color:orange;"class="fab fa-html5 programming-icons" style="margin-bottom:10px"></i>
+									<div class="show-HTML" style="visibility: visible;">HTML</div>
+									</div>
+									<div>
 									<i style="color:blue;" class="fab fa-css3 programming-icons"></i>
+									<div class="show-CSS" style="visibility: visible;margin-top:10px;">CSS</div>
+									</div>
+									<div>
 									<i style="color:yellow;"class="fab fa-js programming-icons"></i>
+									<div class="show-JS" style="visibility: visible;margin-top:10px">Javascript</div>
+									</div>
+									<div>
 									<i style="color:green;" class="fab fa-node-js programming-icons"></i>
+									<div class="show-NodeJS" style="visibility: visible;margin-top:10px">NodeJS</div>
+									</div>
+									<div>
 									<i style="color:aqua;" class="fab fa-react programming-icons"></i>
+									<div class="show-React" style="visibility: visible;margin-top:10px">React</div>
+									</div>
+									<div>
 									<i style="color:aliceblue;" class="fab fa-python programming-icons"></i>
+									<div class="show-Python" style="visibility: visible;margin-top:10px;color:green">Python</div>
+									</div>
+									<div>
 									<i style="color:orange;" class="fab fa-java programming-icons"></i>
+									<div class="show-Python" style="visibility: visible;margin-left:5px;margin-top:10px;color:orange">Java</div>
 									</div>
 							
-									<div class="language-text-container">
+									<!-- <div class="language-text-container">
 									<div class="show-HTML" style="visibility: visible;">HTML</div>
-									<div class="show-CSS" style="visibility: visible;margin-top:10px;">CSS</div>
-									<div class="show-JS" style="visibility: visible;margin-top:10px">Javascript</div>
+									
+									
 									<div class="show-NodeJS" style="visibility: visible;margin-top:10px">NodeJS</div>
 									<div class="show-React" style="visibility: visible;margin-top:10px">React</div>
 									<div class="show-Python" style="visibility: visible;margin-top:10px;color:green">Python</div>
 									<div class="show-Python" style="visibility: visible;margin-left:5px;margin-top:10px;color:orange">Java</div>
-									</div>
+									</div> -->
+								</div>
 <!-- 									
 									<div class="language-container">
 									<i style="color:blue;" class="fab fa-css3 programming-icons"></i>
@@ -164,6 +185,7 @@
 										<li><a href="https://pure-escarpment-17738.herokuapp.com/" class="button">Live Demo</a></li>
 									</ul>
 									<a href="https://github.com/timtitan180/Mountaineer-Web" class="link">View Code</a>
+									<p class="language" style="color:yellow">JavaScript</p>
 								</article>
 								<article>
 									<header>
@@ -175,6 +197,7 @@
 										<li><a href="http://currency-conversion-app.herokuapp.com/" class="button">Live Demo</a></li>
 									</ul>
 										<a href="https://github.com/timtitan180/Currency-Converter" class="link">View Code</a>
+										<p class="language" style="color:yellow">JavaScript</p>
 								</article>
 								<article>
 									<header>
@@ -187,18 +210,19 @@
 										<li><a href="https://boredomsolver.herokuapp.com/" class="button">Live Demo</a></li>
 									</ul>
 										<a href="https://github.com/timtitan180/BoredomSolver/">View Code</a>
+										<p class="language" style="color:aqua">React</p>
 								</article>
 								<article>
 									<header>
-										<h2><a href="#">Weather App</a><br /></a></h2>
+										<h2><a href="#">Simple Form</a><br /></a></h2>
 									</header>
-									<a href="https://desolate-cliffs-91901.herokuapp.com/" class="image fit"><img class="project-img" src="images/chicagoweatherapp.png" alt="" /></a>
+									<a href="https://desolate-cliffs-91901.herokuapp.com/" class="image fit"><img class="project-img" src="images/SimpleForm.png" alt="" /></a>
 									<p>See code or Live Demo. Description of project can be found by clicking the link to my Github</p>
+									<iframe src="https://giphy.com/embed/LZc292rcZ4sW9OVNXM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 									<ul class="actions special">
-										<li><a href="https://desolate-cliffs-91901.herokuapp.com/" class="button">Live Demo</a></li>
 									</ul>
-										<a href="">View Code</a>
-
+										<a href="https://github.com/timtitan180/CloudScape/">View Code</a>
+										<p class="language" style="color:yellow">JavaScript</p>
 									<header>
 								</article>
 								<article>
@@ -211,6 +235,7 @@
 										<li><a href="https://pdf-analyzer-app.herokuapp.com/" class="button">Live Demo</a></li>
 									</ul>
 										<a href="">View Code</a>
+										<p class="language" style="color:green">Python</p>
 
 									<header>
 								</article>
@@ -224,15 +249,39 @@
 										<li><a href="https://localhost:8080/" class="button">Live Demo</a></li>
 									</ul>
 										<a href="">View Code</a>
+										<p class="language" style="color:orange">Java</p>
 
 								</article>
 							</section>
 							<section class="contact-me">
 								<div>
 									<h1 style="margin-left:200px">CONTACT ME</h1>
-									<p style="margin-left:150px">If you like what you see or if you want to learn more feel free to message me at my email</p>
+									<p style="margin-left:150px">If you think I would be a great addition to your team or if you want to learn more feel free to message me at my email</p>
 									<p style="margin-left:150px">at timtudosa6@gmail.com or my <a href="https://www.linkedin.com/in/tim-tudosa-a3539315a/" class="icon brands fa-linkedin" style="height:60px;width:60px"></a></p>
 								</div>
+			<!-- <form method="POST" action="/contact">
+    		<div class="mainContainer">
+        	<div>
+            <input type="text" class="emailInput" name="email" id="email" placeholder="Enter email address" autocomplete="off">
+            <input type="text" class="emailInput" name="subject" id="subject" placeholder="Enter Subject"/>
+			<input type="text" class="emailInput" name="message" id="message" placeholder="Enter message"/>
+			<input type="submit" class="submitButton" id="submitButon"/>
+			</div>
+    	</div>
+		</form> -->
+ <!-- {% block script %}
+    <script>
+        button = document.querySelector(".blueButton")
+        button.addEventListener("click",handleSubmit)
+        handleSubmit(){
+            document.querySelector(".imgContainer").style.visibility = "visible"
+
+        }
+
+    </script>
+{% endblock %}
+
+{% endblock %} -->
 								<!-- <form action="https://formsubmit.com/timtudosa6@gmail.com" method="POST">
 									<!-- <div class="contact-me-inputs"><input type="email" name="email" placeholder="Enter your email"/>
 									<input class="contact-form-message" type="message" name="message" placeholder="Enter your message here..."/></div>
