@@ -54,7 +54,7 @@ app.post("/contact", (req,res)=>{
     json:true
   }
 
-  fetch("http://localhost:6532/").then(response=>{response.)}).then(data=>{response.send(JSON.stringify(data))});
+  fetch("http://localhost:6532/").then(response=>{response}).then(data=>{response.send(JSON.stringify(data))});
   //send data object to flask server in string format and from the flask server parse the string to get the json
   //format then pull out the email subject and message
 
